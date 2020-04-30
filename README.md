@@ -4,7 +4,7 @@ This is a pipeline to perform data filtering, and mapping using RNA-Seq data
 ## Data filtering
 This process is made for trimming and low quality removal data
 
-```perl
+```
 #!/bin/bash
 #SBATCH -D .
 #SBATCH -o trimm_all_files.out
