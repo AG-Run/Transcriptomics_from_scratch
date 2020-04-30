@@ -1,5 +1,5 @@
 # Transcriptomics_from_scratch
-This is a pipeline to perform data filtering, and mapping using RNA-Seq data in HPC enviroment running using slurm files
+This is a pipeline to perform data filtering, and mapping using RNA-Seq data in HPC enviroment using slurm files
 
 ## Data quality analysis using FASTQC
 To determine the data quality run the command (slurm)
