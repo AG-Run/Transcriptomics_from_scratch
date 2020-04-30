@@ -17,3 +17,9 @@ module load software/bioinformatics/trimmomatic/0.36
 
 time perl trimpoly_batch.pl AM.list;
 ```
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
