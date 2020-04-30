@@ -6,12 +6,12 @@ To determine the data quality run the command (slurm)
 
 ```
 #!/bin/bash
-#SBATCH -D /home_unal/Biop_Temp/Download/Rawdata_Levapan_Cepas
+#SBATCH -D /home_unal/Biop_Temp/Download/Rawdata
 #SBATCH -p normal
 #SBATCH -N 1
 #SBATCH -n 32
 #SBATCH -J Fastqc
-#SBATCH -o /home_unal/Biop_Temp/Download/Rawdata_Levapan_Cepas/fastqc.log
+#SBATCH -o /home_unal/Biop_Temp/Download/Rawdata/fastqc.log
 
 module load software/bioinformatics/fastqc/0.11.4
 
