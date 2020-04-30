@@ -4,14 +4,14 @@ This is a pipeline to perform data filtering, and mapping using RNA-Seq data in 
 ## Download data using a FTP extension provided
 If a FTP extension is provided by the sequencing center run the command
 
-``` lftp -u X202SC19121298-Z01_01_29_20_gQCV , cxZqnrEq  -p 21 -d 128.120.88.251 set ssl:verify-certificate no ```
+``` lftp -u X200ZC00000000-Z00_00_00_00_dLLL , ccCcccEe  -p 21 -d 000.000.00.000 set ssl:verify-certificate no ```
 
 Where
 | Parameter |     Description     | 
 | --------- |:-------------------:| 
 | -u        | Username, password  | 
 | -p        | Port, for ftp use 21|
-| -d        | URL for download    | 
+| -d        | URL for data download | 
 | set ssl   | "no" for avoid a certificate request |  
 
 
