@@ -15,3 +15,9 @@ This process is made for trimming and low quality removal data
 module load software/bioinformatics/trimmomatic/0.36
 
 time perl trimpoly_batch.pl AM.list
+
+
+```perl
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
