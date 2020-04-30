@@ -9,9 +9,9 @@ If a FTP extension is provided by the sequencing center run the command
 Where
 | Parameter |     Description     | 
 | --------- |:-------------------:| 
-| u         | Username, password  | 
-| p         | Port, for ftp use 21|
-| d         | URL for download    | 
+| -u        | Username, password  | 
+| -p        | Port, for ftp use 21|
+| -d        | URL for download    | 
 | set ssl   | "no" for avoid a certificate request |  
 
 
