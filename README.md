@@ -6,18 +6,19 @@ To determine the data quality run the command (slurm)
 
 ```
 #!/bin/bash
-#SBATCH -D /home_unal/Biop_Temp/Download/Rawdata
+#SBATCH -D /home/Biop_Temp/Download/Rawdata
+#SBATCH -o FastQC.out
+#SBATCH -e FastQC.err
+#SBATCH -J FastQC
 #SBATCH -p normal
 #SBATCH -N 1
 #SBATCH -n 32
-#SBATCH -J Fastqc
-#SBATCH -o /home_unal/Biop_Temp/Download/Rawdata/fastqc.log
+#SBATCH -o /home/Biop_Temp/Download/Rawdata/fastqc.log
 
 module load software/bioinformatics/fastqc/0.11.4
 
 fastqc Y*/*.gz
 ```
-
 
 ## Data filtering
 This process is made for trimming and low quality removal data
