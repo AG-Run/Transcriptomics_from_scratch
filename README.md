@@ -1,5 +1,23 @@
 # Transcriptomics_from_scratch
-This is a pipeline to perform data filtering, and mapping using RNA-Seq data
+This is a pipeline to perform data filtering, and mapping using RNA-Seq data in HPC enviroment running using slurm files
+
+## Data quality analysis using FASTQC
+To determine the data quality run the command (slurm)
+
+```
+#!/bin/bash
+#SBATCH -D /home_unal/Biop_Temp/Download/Rawdata_Levapan_Cepas
+#SBATCH -p normal
+#SBATCH -N 1
+#SBATCH -n 32
+#SBATCH -J Fastqc
+#SBATCH -o /home_unal/Biop_Temp/Download/Rawdata_Levapan_Cepas/fastqc.log
+
+module load software/bioinformatics/fastqc/0.11.4
+
+fastqc Y*/*.gz
+```
+
 
 ## Data filtering
 This process is made for trimming and low quality removal data
