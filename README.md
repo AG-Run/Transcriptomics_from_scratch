@@ -35,20 +35,30 @@ fastqc Y*/*.gz
 ```
 
 ## Data filtering
-This process is made for trimming and low quality removal data
+This process is made for trimming in loop several fq.gz files in HPC.
 
 ```
 #!/bin/bash
-#SBATCH -D .
-#SBATCH -o trimm_all_files.out
-#SBATCH -e trimm_all_files.err
-#SBATCH -J trimm_all_f
-#SBATCH -n 3
-#SBATCH -p gpu
+#SBATCH -D ./
+#SBATCH -o Trimm.out
+#SBATCH -e Trimm.err
+#SBATCH -J Trimmo
+#SBATCH -n 32
+#SBATCH -p normal
 
+
+##module
 module load software/bioinformatics/trimmomatic/0.36
 
-time perl trimpoly_batch.pl AM.list;
+##Tool
+
+for f1 in *1.fq.gz
+do
+    f2=${f1%%1.fq.gz}"2.fq.gz"
+
+TrimmomaticPE -phred33 -trimlog TrimLog $f1 $f2 trimmed."$f1".1P.fq.gz trimmed."$f1".1U.fq.gz trimmed."$f2".2P.fq.gz trimmed."$f2".2U.fq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 HEADCROP:12 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:145
+done
+
 ```
 
 
