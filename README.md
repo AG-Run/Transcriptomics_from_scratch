@@ -63,7 +63,7 @@ Note:If trimming is performed, it is necessary to determine again the quality da
 
 This process is made for align the RNA-Seq sequences to a reference genome. To run the mapping with Hisat2, two steps are followed.
 
-1) Build the index of your reference genome
+1) *Build the index of your reference genome
 This process facilitates the aligning. Next is an example for Saccharomyces cerevisiae genome R64_SC.  
 
 ```
@@ -83,8 +83,8 @@ hisat2-build -p 16 GCF_000146045.2_R64_genomic.fasta R64_hisat2
 ```
 Where *p*: threads, *GCF_000146045.2_R64_genomic.fasta*: reference genome in fasta file, *R64_hisat2*: preffix of the index files.
 
-2) Perform the mapping with Hisat2 tool
-Run  next command for all RNA-Seq samples
+2) *Perform the mapping with Hisat2 tool
+Run next command for all RNA-Seq samples
 
 ```
 #!/bin/bash
@@ -104,7 +104,7 @@ hisat2 -p 30 -x /path to the index files/R64_hisat2 -1 forwared_file_1.fq.gz -2 
 ```
 
 ## Conversion from .sam to bam files using Samtools
-In this step, the ouptpu of hisat2 in .sam files will be transformed into .bam files to be analyzed further using the SeqMonk tool.
+In this step, the output of hisat2, the *.sam* files will be transformed into *sort.bam* files. These files will be later analyzed using the SeqMonk software.
 
 ```
 #!/bin/bash
@@ -126,7 +126,7 @@ samtools sort Y1_38.bam -o Y1_38_sort.bam&
 ```
 
 ## Analysis of diferencial expression using SeqMonk
-The output of the conversion step are sort.bam files, these files are the input data for SeqMonk.
+The output of the conversion step are *sort.bam* files, these files are the input data for SeqMonk.
 Nice [SeqMonk tutorials and manuals](https://www.bioinformatics.babraham.ac.uk/projects/seqmonk/).
 
 
