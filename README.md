@@ -127,7 +127,7 @@ samtools sort Y1_38.bam -o Y1_38_sort.bam&
 
 ## Analysis of diferencial expression using SeqMonk
 The output of the conversion step are *sort.bam* files, these files are the input data for SeqMonk.
-Nice [SeqMonk tutorials and manuals](https://www.bioinformatics.babraham.ac.uk/projects/seqmonk/).
+Nice [SeqMonk tutorials and manuals](https://www.bioinformatics.babraham.ac.uk/projects/seqmonk/). are available on the web.
 
 
 Thanks for check this pipeline!
