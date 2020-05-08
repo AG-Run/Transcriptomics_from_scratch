@@ -61,7 +61,7 @@ Note:If trimming is performed, it is necessary to determine again the quality da
 
 ## Mapping using Hisat2
 
-This process is made for align the RNA-Seq to a reference genome. To run the mapping with Hisat2, two steps are followed.
+This process is made for align the RNA-Seq sequences to a reference genome. To run the mapping with Hisat2, two steps are followed.
 
 1) Build the index of your reference genome
 This process facilitates the aligning. Next is an example for Saccharomyces cerevisiae genome R64_SC.  
