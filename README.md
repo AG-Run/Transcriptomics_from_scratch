@@ -35,7 +35,7 @@ fastqc Y*/*.gz
 ```
 
 ## Data filtering
-This process is made for trimming in loop several RNA-Seq fq.gz files in HPC. It is important to evaluate the pertinence to perform this step, because severe trimming can affect the outputs of expression in downstream analyses. If data is in good quality, this step could be avoided. A good discussion about it can be found in next papers and forums 
+This process is made for trimming in loop several RNA-Seq fq.gz files in HPC. It is important to evaluate the pertinence to perform this step, because severe trimming can affect the outputs of expression in downstream analyses. If data is in good quality, this step could be avoided. A good discussion about it can be found in next papers and forums: [MacManes, 2014](https://www.frontiersin.org/articles/10.3389/fgene.2014.00013/full) , [Liao & Shi, 2019](https://www.biorxiv.org/content/10.1101/833962v1) 
 
 ```
 #!/bin/bash
